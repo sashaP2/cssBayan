@@ -1,0 +1,99 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4d2323;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #829985;
+  }
+
+  .wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align:center;
+  }
+ .wrapper:hover {
+    color: aliceblue;
+    cursor: pointer;
+    background-color: #4d2323;
+ }
+
+  .meme_title {
+    color: #829985;
+    background-color: aqua;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+    cursor: pointer;
+  }
+  .meme_title:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #53b51f transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+  .meme_title:hover {
+    color: #4d2323;
+    cursor: pointer;
+}
+
+  .meme_picture {
+    display: none;
+    padding: 10px 15px;
+
+    color: #fff;
+    font-size: 14px;
+}
+input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+input:checked ~ .meme_title {
+    background-color: #b91125;
+}
+
+input:checked ~ .meme_title::after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #de2121 transparent;
+}
+
+input:checked ~ .meme_picture {
+   display: block;
+}
+
+input:hover ~ .meme_title::after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #de2121 transparent;
+}
+
+input:hover ~ .meme_picture {
+    display: block;
+    transition: 0.3s;
+ }
