@@ -8,31 +8,29 @@
   }
 
   h1 {
-    font-size: 6vh;
+    font-size: 5vw;
     font-weight: 700;
     letter-spacing: 0.1vw;
     text-align: center;
     color: #ffffff;
-    padding-top: 2%;
-    padding-bottom: 1%;
   }
 
   h2 {
-    font-size: 4vh;
-    padding: 1%;
+    font-size: 2.2vw;
+    padding: 0.5vw;
     color: #ffffff;
   }
 
   img {
-    width: 40vw;
+    width: 35vw;
     text-align: center;
   }
 /*******************************/
 .wrapper {
-    width: 55vw;
+    width: 60vw;
     margin: 0 auto;
     text-align: center;
-    background-color: #6171c1;
+    background-color: rgb(85, 95, 145);
   }
 
 .wrapper:hover {
@@ -45,7 +43,8 @@
     display: flex;
     justify-content: space-between;
     margin: 0.5vw;
-    padding: 0.4vmax;
+    border-top:  0.4vw double #751462;
+    cursor: pointer;
 }
 
 .arrow {
@@ -65,29 +64,19 @@ input {
     justify-content: center;
 }
 /***********************************/
-
-input:checked + .meme_title {
-    color: black;
-  }
-
-.meme_title:active .arrow {
-    opacity: 0.6;
-  }
-
 input:active + .meme_title {
     color: rgb(12, 12, 43);
-    opacity: 0.6;
+    opacity: 0.8;
   }
 
 input:checked + .meme_title .arrow {
     display: inline;
-    animation: rotateOn ease 0.2s;
+    animation: rotateOn ease 0.3s;
     transform: rotate(90deg);
   }
 
 .meme_title:active .meme_picture {
     display: flex;
-    animation: fadeOut ease 0.3s;
   }
 
 input:checked + .meme_title .meme_picture {
@@ -102,19 +91,21 @@ input:checked + .meme_title .meme_picture {
 
 .wrapper:hover .arrow, .wrapper:hover input:checked + .meme_title .arrow {
   display: inline;
-  animation: fadeOut ease 0.2s;
   cursor: pointer;
 }
 
 .meme_title:hover .arrow {
   display: inline;
-  animation: rotateOn ease 0.2s;
+  animation: rotateOn ease 0.3s;
   transform: rotate(90deg);
   cursor: pointer;
+}
+
+.meme_name:hover {
+  border-top:  0.4vw double rgb(85, 95, 145);
 }
 
 .meme_title:hover .meme_picture {
   cursor: pointer;
   display: flex;
-  animation: fadeOut ease 0.2s;
 }
