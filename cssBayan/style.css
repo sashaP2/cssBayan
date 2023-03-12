@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, blue, pink);
+  }
+
+  h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    letter-spacing: 0.1vw;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  h2 {
+    font-size: 2.2vw;
+    padding: 0.5vw;
+    color: #ffffff;
+  }
+
+  img {
+    width: 35vw;
+    text-align: center;
+  }
+/*******************************/
+.wrapper {
+    width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(85, 95, 145);
+  }
+
+.wrapper:hover {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: #751462;
+ }
+/************************************/
+.meme_name {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5vw;
+    border-top:  0.4vw double #751462;
+    cursor: pointer;
+}
+
+.arrow {
+  width: 2vw;
+}
+
+input {
+    display: none;
+}
+
+.meme_title {
+    display: block;
+}
+
+.meme_picture {
+    display: none;
+    justify-content: center;
+}
+/***********************************/
+input:active + .meme_title {
+    color: rgb(12, 12, 43);
+    opacity: 0.8;
+  }
+
+input:checked + .meme_title .arrow {
+    display: inline;
+    animation: rotateOn ease 0.3s;
+    transform: rotate(90deg);
+  }
+
+.meme_title:active .meme_picture {
+    display: flex;
+  }
+
+input:checked + .meme_title .meme_picture {
+    display: flex;
+    animation: none;
+  }
+.arrow, input:checked + .meme_title .arrow {
+  display: none;
+   }
+
+/************************************/
+
+.wrapper:hover .arrow, .wrapper:hover input:checked + .meme_title .arrow {
+  display: inline;
+  cursor: pointer;
+}
+
+.meme_title:hover .arrow {
+  display: inline;
+  animation: rotateOn ease 0.3s;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.meme_name:hover {
+  border-top:  0.4vw double rgb(85, 95, 145);
+}
+
+.meme_title:hover .meme_picture {
+  cursor: pointer;
+  display: flex;
+}
